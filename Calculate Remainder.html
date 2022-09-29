@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Calculating Remainder</title>
+		<style>
+		 .content{
+			 
+			 border: solid 4px orange;
+			 width: 660px;
+			 background: linear-gradient(to top, #1a8cff,#000033 );
+			 margin: 10%  27%;
+			 box-shadow: 9px 15px 20px black;
+			 
+		 }
+		 
+		
+           
+		 #boton{
+			 
+			 padding:20px 30px;
+			 font-weight: 600;
+			 border-radius: 25px;
+			 background: #e60000;
+			 box-shadow: inset 4px 6px 8px yellow;
+			 color: white;
+			 font-size: 16px;
+			 
+		 }
+		 
+		 #boton:hover{
+			 
+			 background: yellow;
+			 box-shadow: inset -4px -6px 9px red;
+			 color: black;
+			 
+			 
+		 }
+		 
+		 
+		 h2{
+			 
+			 color:yellow;
+			 font-weight: 550;
+			 font-size: 30px;
+			 
+		 }
+		 
+		    label{
+			 font-weight: 600;
+			 color: white;
+			 
+		 }
+		 
+		 #remainder{
+			 
+			 font-weight: 600;
+			 color: #ffff00;
+			 font-size: 20px;
+		     text-shadow: 4px 5px 8px black;
+		
+		</style>
+	
+	</head>
+	<body style="text-align: center; background: #00e6e6">
+	  <div class="content">	
+		<h2>Remainder Calculator</h2>
+		<label for="value1">Enter Value1</label>
+		
+		<input type="number" id="value1" placeholder="Enter Value1">
+		<br><br>
+		
+		<label for="value2">Enter Value2</label>
+		
+		<input type="number" id="value2" placeholder="Enter Value2">
+		<br><br>
+		
+		<button id="boton" onclick="remainderCalculator()">Click Here!</button>
+		<p id="remainder">Remainder: <span id="display"></span></p>
+		
+	  </div>
+	   
+	   <script language="Javascript" type="text/javascript">
+	   
+	 
+    
+    function remainderCalculator(value1,value2){
+		var value1 = parseInt(document.getElementById("value1").value);
+		
+		var value2 = parseInt(document.getElementById("value2").value);
+		
+    
+    
+    for(i = value1;i >= value2;i = i - value2){
+        
+        console.log(i - value2);
+    }
+    
+    document.getElementById("display").innerHTML = i;
+}
+	   
+	   
+	   </script>
+	</body>
+
+</html>
+
